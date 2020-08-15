@@ -9,10 +9,11 @@ reddit = praw.Reddit(
     username=config.reddit_username,
     password=config.reddit_password,
 )
+notify = Notify(endpoint=config.notify_endpoint)
 
 
-def send_link_notification(link):
-    notify.send("New Flaired Post!", link)
+def send_link_notification(subreddit, link):
+    notify.send(f"New Flaired Post from r/{subreddit}!", link)
 
 
 def get_post_with_flair_from_subreddit(subreddit, flair):
@@ -22,10 +23,8 @@ def get_post_with_flair_from_subreddit(subreddit, flair):
         _flair = submission.link_flair_text
 
         if _flair == flair:
-            send_link_notification(submission.url)
+            send_link_notification(subreddit, submission.url)
 
 
 if __name__ == "__main__":
-    notify = Notify(endpoint=config.notify_endpoint)
-
     get_post_with_flair_from_subreddit("python", "Beginner Showcase")
