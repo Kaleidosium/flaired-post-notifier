@@ -27,5 +27,4 @@ def get_post_with_flair_from_subreddit(subreddit, flair):
 if __name__ == "__main__":
     notify = Notify(endpoint=config.endpoint)
 
-    get_post_with_flair_from_subreddit("ICanDrawThat", "Offer")
-    get_post_with_flair_from_subreddit("DrawForMe", "Free Offer")
+    get_post_with_flair_from_subreddit("python", "Beginner Showcase")
