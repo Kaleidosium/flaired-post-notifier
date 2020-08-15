@@ -24,6 +24,7 @@ def get_post_with_flair_from_subreddit(subreddit, flair):
         if _flair == flair:
             send_link_notification(submission.url)
 
+
 if __name__ == "__main__":
     notify = Notify(endpoint=config.endpoint)
 
