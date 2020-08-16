@@ -18,7 +18,9 @@ subreddit_dict = {
 
 
 def get_multireddit_stream(subreddit_dict):
-    return reddit.subreddit("+".join(subreddit_dict)).stream.submissions(skip_existing=True)
+    return reddit.subreddit("+".join(subreddit_dict)).stream.submissions(
+        skip_existing=True
+    )
 
 
 def filter_flairs(submission_gen, subreddit_dict):
