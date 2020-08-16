@@ -1,8 +1,8 @@
 from notify_run import Notify
+from praw import Reddit
 import config
-import praw
 
-reddit = praw.Reddit(
+reddit = Reddit(
     client_id=config.reddit_client_id,
     client_secret=config.reddit_client_secret,
     user_agent=config.reddit_user_agent,
