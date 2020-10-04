@@ -12,7 +12,6 @@ reddit = Reddit(
 notify = Notify(endpoint=config.notify_endpoint)
 
 
-
 def get_multireddit_stream(subreddit_dict):
     return reddit.subreddit("+".join(subreddit_dict)).stream.submissions(
         skip_existing=True
