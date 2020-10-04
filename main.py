@@ -12,11 +12,6 @@ reddit = Reddit(
 notify = Notify(endpoint=config.notify_endpoint)
 
 
-subreddit_dict = {
-    "python": {"Beginner Showcase"},
-}
-
-
 def get_multireddit_stream(subreddit_dict):
     return reddit.subreddit("+".join(subreddit_dict)).stream.submissions(
         skip_existing=True
@@ -40,4 +35,4 @@ def send_notifications(subreddit_dict):
 
 
 if __name__ == "__main__":
-    send_notifications(subreddit_dict)
+    send_notifications(config.subreddit_dict)

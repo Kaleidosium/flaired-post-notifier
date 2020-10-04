@@ -7,3 +7,7 @@ reddit_password = ""
 
 # notify.run
 notify_endpoint = ""
+
+subreddit_dict = {
+    "python": {"Beginner Showcase"},
+}
