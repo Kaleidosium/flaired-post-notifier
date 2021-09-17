@@ -1,2 +1,2 @@
-notify_run==0.0.13
-praw==7.2.0
+notify_run==0.0.14
+praw==7.4.0
