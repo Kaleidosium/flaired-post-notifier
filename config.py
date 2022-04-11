@@ -8,6 +8,7 @@ reddit_password = ""
 # notify.run
 notify_endpoint = ""
 
+# subreddits and flairs to monitor
 subreddit_dict = {
     "python": {"Beginner Showcase"},
 }
